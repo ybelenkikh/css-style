@@ -1,3 +1,7 @@
+.portfolio img{
+    object-fit: cover;
+    max-width: 100%;
+}
 a {
     text-decoration: none;
 }
@@ -40,9 +44,7 @@ body {
     margin: 0 auto;
 }
 
-* + * {
-   
-}
+* + * {}
 
 ul {
     padding: 0;
@@ -53,12 +55,72 @@ li {
     margin: 0;
 }
 
-ul > li {
-    
+ul > li {}
+
+button {
+    cursor: pointer;
 }
 
-/*
-ul > li + li {
+.nav ul > li + li {
     margin-bottom: 1em; // все кроме первого
 }
-*/
+
+.page-my-grid {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: .5em;
+    grid-auto-flow: dense;
+}
+header{
+    background-color: #ddc7c7;
+    grid-column: 1 / 5; 
+    grid-row: 1 / 2;
+}
+.main{
+    background-color: #a08f8f;
+    grid-column: 1 / 5;  
+    grid-row: 2 / 5;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    
+}
+.aside{
+    background-color: #8d1111;
+    grid-column: 1 / 2; 
+    grid-row: 1 / 4;
+    
+}
+main{
+    grid-column: 2 / 3; 
+    grid-row: 1 / 4;
+}
+.sidebar{
+    grid-column: 3 / 4; 
+    grid-row: 1 / 4;
+}
+footer{
+    grid-column: 1 / 5;  
+    background-color: #554f4f;
+    grid-row: 5 / 6;
+}
+
+/*.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: .5em;
+}
+.grid > *{
+    text-align: center;
+    background-color: #9b9292;
+    padding: 2em;
+    border-radius: .5em;
+}*/
+ul {
+    display: flex;
+}
